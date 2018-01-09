@@ -1,0 +1,20 @@
+<div class="sidebar-nav">
+<ul class="nav nav-list">
+	<{if $icms_isadmin}>
+	<p><a class="menuTop" href="<{$icms_url}>/admin.php" title="<{$block.lang_adminmenu}>"> <span class="glyphicon glyphicon-wrench" style="padding-right:5px;"> </span><{$block.lang_adminmenu}></a></p>
+	<p class="divider"></p>
+	<p><a href="<{$icms_url}>/user.php" title="<{$block.lang_youraccount}>"> <span class="glyphicon glyphicon-user" style="padding-right:5px;"> </span><{$block.lang_youraccount}></a>
+	</p>
+	<{else}>
+	<p><a class="menuTop" href="<{$icms_url}>/user.php"title="<{$block.lang_youraccount}>"> <span class="glyphicon glyphicon-user" style="padding-right:5px;"> </span><{$block.lang_youraccount}></a></p>
+	<{/if}>
+	<p><a href="<{$icms_url}>/notifications.php" title="<{$block.lang_notifications}>"> <span class="glyphicon glyphicon-envelope" style="padding-right:5px;"> </span><{$block.lang_notifications}></a></p>
+	<{if $block.new_messages > 0}>
+	<p><a class="highlight" href="<{$icms_url}>/viewpmsg.php" title="<{$block.lang_inbox}>"> <span class="glyphicon glyphicon-comment" style="padding-right:5px;"> </span><{$block.lang_inbox}> <span class="badge pull-right"><{$block.new_messages}></span></a></p>
+	<{else}>
+	<p><a href="<{$icms_url}>/viewpmsg.php" title="<{$block.lang_inbox}>"> <span class="glyphicon glyphicon-comment" style="padding-right:5px;"> </span><{$block.lang_inbox}></a></p>
+	<{/if}>
+	<p class="divider"></p>
+	<p><a href="<{$icms_url}>/user.php?op=logout" title="<{$block.lang_logout}>"> <span class="glyphicon glyphicon-off" style="padding-right:5px;"> </span><{$block.lang_logout}></a></p>
+</ul>
+</div>
